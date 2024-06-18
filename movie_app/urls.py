@@ -4,7 +4,7 @@ from django.urls import path
 from .views import MovieReviewListView
 
 urlpatterns = [
-    path('api/v1/directors/', views.DirectorListView.as_view(), name='directors'),
+    path('api/v1/directors/', views.director_list_api_view.as_view(), name='directors'),
     path('api/v1/directors/<int:id>/', views.director_detail_api_view),
     path('api/v1/movies/', views.movie_list_api_view),
     path('api/v1/movies/<int:id>/', views.movie_detail_api_view),
